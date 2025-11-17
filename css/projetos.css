@@ -1,0 +1,266 @@
+
+/*header e nav*/ 
+
+/* classe para redes sociais*/
+/*.nav-social {
+  background-color: orange;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-size: 30px;
+  padding: 10px 70px;
+  justify-content: space-between;
+
+  a {
+    margin: 0px 20px 0px 0px;
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: orange;
+  }
+}
+
+
+
+.botao {
+  background-color: rgb(233, 152, 1);
+  cursor: pointer;
+  padding: 9px 10px 2px;
+  margin: -8px;
+  font-size: 25px;
+}
+
+.separar {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.botao:hover {
+  background-color: rgb(175, 114, 0);
+}
+
+.nav-main {
+  display: flex;
+}
+
+.div-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 150px -30px 0px;
+
+  a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 20px;
+  }
+  a:hover {
+    color: orange;
+  }
+}
+
+nav {
+  img {
+    margin: 10px;
+    width: 250px;
+    height: auto;
+  }
+}
+
+/* fim do header */
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+}
+
+/* classe para redes sociais*/
+/*
+.nav-social {
+  background-color: orange;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-size: 30px;
+  padding: 10px 70px;
+  justify-content: space-between;
+
+
+  a { 
+    margin: 0px 20px 0px 0px;
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: orange;
+}
+}  
+.botao {
+  background-color: rgb(233, 152, 1);
+  cursor: pointer;
+  padding: 9px 10px 2px;
+  margin: -8px  ;
+  font-size: 25px;
+}
+
+.separar {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.botao:hover {
+  background-color: rgb(175, 114, 0);
+}
+
+.nav-main {
+  display: flex;
+}
+
+.div-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 150px -30px 0px;
+  
+  a {
+    text-decoration: none;  
+    color: black;
+    margin: 0 15px;
+    font-size: 20px;
+  }
+  a:hover {
+    color: orange;
+  }
+
+}
+
+
+nav {
+  img {
+    margin: 10px;
+    width: 250px;
+    height: auto;
+  }
+}
+
+section {
+  width: 100%;
+  height: auto;
+  background-color: #3079f0;
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 25px;
+
+  p {
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: orange;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    img {
+      width: 600px;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+}
+
+/* footer {    "footer antigo talvez reutilze"
+  background-color: orange;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.2;
+
+  p {
+    color: white;
+  }
+} */
+/*
+.bi:hover {
+  width: 50px;
+  height: 50px;
+  color: #0056b3;
+}
+
+:root {
+  --azul-principal: #0d47a1; /* azul principal dos mano la da fijo */
+  --laranja-destaque: #ff9800; /* laranja destaque 'talvez seja mais azul' dos brother da fijo */
+  --branco: #ffffff; /* branco puro fazer uma juncao com azul*/
+  --cinza-claro: #f5f5f5; /* cinza claro para fundos se der certo */
+}
+/*
+footer {
+  background-color: var(--azul-principal);
+  color: var(--branco);
+  padding: 40px 0 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 10%;
+}
+
+.footer-logo h2 {
+  color: var(--laranja-destaque);
+  margin-bottom: 10px;
+}
+
+.footer-formacao h3,
+.footer-contato h3 {
+  color: var(--laranja-destaque);
+  margin-bottom: 10px;
+}
+
+.footer-formacao p,
+.footer-contato p {
+  margin: 5px 0;
+}
+
+.footer-contato a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contato a:hover {
+  color: var(--laranja-destaque);
+}
+
+.footer-botao {
+  border-top: 1px solid var(--laranja-destaque);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  font-size: 0.9em;
+  background-color: #0c3c91;
+}
+eu to perdendo cabelo
