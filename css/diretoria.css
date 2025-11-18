@@ -211,3 +211,62 @@ footer {
   font-size: 0.9em;
   background-color: #0c3c91;
 }
+
+/* Container do dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px; /* espaçamento entre dropdowns */
+}
+
+/* Link principal */
+.dropdown > a {
+  color: #004aad; /* Azul FIJO */
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.dropdown > a:hover {
+  color: #ff7f00; /* Laranja FIJO */
+}
+
+/* Conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004aad; /* Azul FIJO */
+  min-width: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Links dentro do dropdown */
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ff7f00; /* Laranja FIJO */
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Animação de slide */
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
