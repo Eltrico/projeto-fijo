@@ -186,6 +186,186 @@ footer {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+.projeto-fijo {
+  padding: 40px 0 50px;
+  background: #f5f7fb;
+}
+
+
+.projeto-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+.projeto-hero {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 220px;
+  margin-bottom: 20px;
+  background-image: url("img/centro-marista.jpg");
+  
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+  background-color: #004a8c;
+}
+
+
+.projeto-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(0, 96, 164, 0.92),
+      rgba(0, 96, 164, 0.75));
+}
+
+
+.projeto-hero-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 32px;
+  color: #ffffff;
+}
+
+.projeto-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 165, 0, 0.95);
+ 
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projeto-titulo {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  max-width: 620px;
+  line-height: 1.25;
+}
+
+
+.projeto-card {
+  display: grid;
+  grid-template-columns: 2fr 1.1fr;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-top: 4px solid #f3a71a; }
+ 
+.projeto-card-texto h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #004a8c;
+}
+
+.projeto-card-texto p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+
+.projeto-card-info h4 {
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+  color: #004a8c;
+}
+
+.projeto-card-info p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+  color: #374151;
+}
+
+.projeto-card-info a {
+  color: #004a8c;
+  text-decoration: underline;
+}
+
+
+.projeto-botao {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #f3a71a;
+  /* laranja */
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(243, 167, 26, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.projeto-botao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(243, 167, 26, 0.6);
+}
+
+
+@media (max-width: 768px) {}
+
+.projeto-hero {
+  height: 190px;
+}
+
+.projeto-titulo {
+  font-size: 1.35rem;
+}
+
+
+.projeto-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(0, 96, 164, 0.92),
+      rgba(0, 96, 164, 0.75));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+
+.projeto-hero:hover .projeto-hero-overlay {
+  opacity: 1;
+}
+
+
+.projeto-hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 32px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+
+.projeto-hero:hover .projeto-hero-content {
+  transform: translateY(-5px);
+}
+
+
+.projeto-hero:hover {
+  filter: brightness(0.85);
+}
 
 /*header e nav*/ 
 
