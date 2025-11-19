@@ -1,0 +1,372 @@
+/* ============================
+   RESET GERAL
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ============================
+   VARIÁVEIS GLOBAIS
+============================= */
+:root {
+  --azul-principal: #0d47a1;
+  --laranja-destaque: #ff9800;
+  --branco: #ffffff;
+  --cinza-claro: #f5f5f5;
+}
+
+/* ============================
+   ESTILIZAÇÃO DO BODY
+============================= */
+
+
+
+/* ============================
+   HEADER / NAV
+============================= */
+
+/* Barra superior de redes sociais */
+.nav-social {
+  background: linear-gradient(90deg,#f57c00, #ff9800);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-size: 30px;
+  padding: 5px 70px;
+}
+
+.nav-social a {
+  margin: 0 20px 0 10px;
+  text-decoration: none;
+  color: var(--branco);
+}
+
+/* Container separador de itens */
+.separar {
+  display: flex;
+  gap: 20px;
+}
+
+/* Links do menu */
+.div-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 150px -30px 0;
+}
+
+.div-link a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  font-size: 20px;
+}
+
+.div-link a:hover {
+  color: var(--laranja-destaque);
+}
+
+/* Logo dentro do nav */
+nav img {
+  margin: 10px;
+  width: 250px;
+  height: auto;
+}
+
+
+/* ============================
+   SEÇÃO PRINCIPAL
+============================= */
+section {
+  display: flex;
+  background: linear-gradient(90deg, var(--branco), #0056b3, #3079f0, #3079f0, #3079f0, #3079f0, var(--branco) 100%);
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* ============================
+   ÍCONES
+============================= */
+.bi {
+  transition: transform 1.3s ease;
+  color: var(--branco);
+}
+
+.bi:hover {
+  color: var(--azul-principal);
+}
+
+
+/* ============================
+   FOOTER
+============================= */
+footer {
+  background: linear-gradient(90deg, var(--azul-principal), #1976d2);
+  color: var(--branco);
+  padding: 40px 0 10px;
+}
+
+.footer-social {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-social .bi {
+  font-size: 30px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-social .bi:hover {
+  color: var(--laranja-destaque);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 10%;
+}
+
+.footer-logo img {
+  width: 250px;
+  height: auto;
+}
+
+.footer-formacao h3,
+.footer-contato h3 {
+  color: var(--laranja-destaque);
+  margin-bottom: 10px;
+}
+
+.footer-formacao p,
+.footer-contato p {
+  margin: 5px 0;
+}
+
+.footer-contato a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contato a:hover {
+  color: var(--laranja-destaque);
+}
+
+.footer-botao {
+  border-top: 1px solid var(--laranja-destaque);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  font-size: 0.9em;
+  background-color: #0c3c91;
+}
+
+
+/* ============================
+   CARROSSEL
+============================= */
+.carrousel {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.container {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.container input {
+  display: none;
+}
+
+.slide {
+  width: 800px;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+}
+
+.manual-navegacao {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid var(--branco);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: var(--branco);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.navegacao-auto div {
+  border: 2px solid var(--branco);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  display: none;
+}
+
+.navegacao-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navegacao-auto div:not(:last-child)  {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navegacao-auto .auto-btn1 {
+  background-color: var(--branco);
+}
+
+#radio2:checked ~ .navegacao-auto .auto-btn2 {
+  background-color: var(--branco);
+}
+
+#radio3:checked ~ .navegacao-auto .auto-btn3 {
+  background-color: var(--branco);
+}
+
+#radio4:checked ~ .navegacao-auto .auto-btn4 {
+  background-color: var(--branco);
+}
+
+
+/* ============================
+   ANIMAÇÕES
+============================= */
+
+/* Animação de hover para ícones */
+.div-link a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.div-link a i {
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  font-size: 20px;
+}
+
+.div-link a:hover i {
+  transform: translateX(0);
+  opacity: 1;
+}
+  
+.div-link a:hover {
+  color: #004aad;
+  transition: color 0.3s ease;
+}
+
+
+/* ============================
+   DROPDOWN
+============================= */
+
+/* Container do dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Link principal */
+.dropdown > a {
+  color: #004aad;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.dropdown > a:hover {
+  color: #ff7f00;
+}
+
+/* Conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004aad;
+  min-width: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Links dentro do dropdown */
+.dropdown-content a {
+  color: var(--branco);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ff7f00;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Animação de slide */
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

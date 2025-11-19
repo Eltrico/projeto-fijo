@@ -1,0 +1,321 @@
+        /* Linha do tempo do GG */
+        
+        :root {
+            /* Cores da Fijo (ajuste conforme necessário) */
+            --fijo-primary: #007bff; /* Azul */
+            --fijo-secondary: #ff7f00; /* Laranja */
+            --fijo-text-dark: #333;
+            --fijo-text-light: #fff;
+            --fijo-bg-light: #f8f9fa;
+            --fijo-bg-dark: #343a40;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--fijo-bg-light);
+            color: var(--fijo-text-dark);
+            overflow-x: auto; /* Permite rolagem horizontal se a linha do tempo for muito longa */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--fijo-primary);
+            margin-bottom: 50px;
+            font-size: 2.5em;
+        }
+
+        
+        .jj {
+            background-color: blue;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 50px 0;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between; /* Distribui o espaço entre os itens */
+            align-items: center;
+            /* Ajustado o min-width para os 4 itens restantes. */
+            /* Cada item tem 150px de largura, 4 * 150 = 600px. Adicione um pouco de folga. */
+            min-width: 800px; /* Ajuste este valor conforme o número de itens restantes */
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 8px; /* Espessura da linha */
+            background: var(--fijo-primary); /* Cor da linha */
+            border-radius: 4px;
+            transform: translateY(-50%);
+            z-index: 1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0,5 C25,0 75,10 100,5" stroke="%23007bff" fill="none" stroke-width="8"/></svg>');
+            background-repeat: repeat-x;
+            background-size: contain;
+        }
+
+        .timeline-item {
+            position: relative;
+            z-index: 2;
+            width: 150px; /* Largura para cada item da linha do tempo */
+            text-align: center;
+            flex-shrink: 0; /* Impede que os itens encolham */
+        }
+
+        .timeline-item:nth-child(even) .timeline-circle {
+            margin-top: -100px; /* Para posicionar os círculos em cima da linha */
+        }
+
+        .timeline-item:nth-child(odd) .timeline-circle {
+            margin-bottom: -100px; /* Para posicionar os círculos abaixo da linha */
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--fijo-text-dark);
+            position: absolute;
+            top: -30px; /* Posição acima do círculo */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--fijo-bg-light);
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .timeline-circle {
+            width: 100px; /* Tamanho do círculo */
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--fijo-secondary); /* Cor de fundo do círculo */
+            border: 5px solid var(--fijo-primary); /* Borda do círculo */
+            margin: 0 auto;
+            cursor: pointer;
+            overflow: hidden; /* Para garantir que a imagem não saia do círculo */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .timeline-circle:hover {
+            transform: scale(1.1); /* Efeito de zoom */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-circle::after {
+            content: attr(data-year); /* Exibe o ano dentro do círculo se a imagem não carregar */
+            color: var(--fijo-text-light);
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Escurece se não tiver imagem */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .timeline-circle:hover::after {
+            opacity: 1;
+        }
+
+        /* Linha do tempo do Vitinho */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: white;
+            font-family: Arial;
+        }
+
+        /* CONTAINER PRINCIPAL */
+        .timeline-container {
+            width: 90%;
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /* CARROSSEL */
+        .timeline-carousel {
+            width: 100%;
+            background: #f57c00;
+            border-radius: 12px;
+            padding: 40px;
+            overflow: visible;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* SLIDES COM MOVIMENTO SUAVE */
+        .slide {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all .6s ease;
+            position: absolute;
+            width: 100%;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0px);
+            position: relative;
+        }
+
+        /* TEXTO E IMAGEM */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .text {
+            width: 50%;
+            font-size: 18px;
+        }
+
+        .image {
+            width: 40%;
+        }
+
+        .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* LINHA DO TEMPO */
+        .line-area {
+            margin-top: 40px;
+            position: relative;
+            height: 80px;
+        }
+
+        .year {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .line {
+            width: 100%;
+            height: 4px;
+            background: white;
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            background: #1976d2;
+            border-radius: 50%;
+            position: absolute;
+            top: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all .5s ease;
+        }
+
+        /* ---------- SETAS SOBREPOSTAS (CORRIGIDO) ---------- */
+        .arrow {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            width: 48px;
+            height: 48px;
+            font-size: 26px;
+            border-radius: 50%;
+            position: absolute;
+            cursor: pointer;
+            transition: .2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .arrow:hover {
+            background-color: #4897ff;
+        }
+
+        /* posição lateral + centralização vertical */
+        .prev {
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* RESPONDIVIDADE */
+        @media (max-width: 768px) {
+
+            .content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .text,
+            .image {
+                width: 100%;
+            }
+
+            .year {
+                font-size: 22px;
+            }
+
+            .arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .timeline-container {
+                flex-direction: column;
+            }
+
+            .prev,
+            .next {
+                position: relative;
+                margin: 10px 0;
+                left: 0;
+                right: 0;
+                transform: none;
+                top: 0;
+            }
+        }
