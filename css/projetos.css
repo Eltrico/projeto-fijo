@@ -576,6 +576,7 @@ section {
   color: #0056b3;
 }
 
+<<<<<<< HEAD
 
  ;
   azul-principal: #0d47a1; /* azul principal dos mano la da fijo */
@@ -584,6 +585,15 @@ section {
   cinza-claro: #f5f5f5; /* cinza claro para fundos se der certo */
 }
 
+=======
+:root {
+  --azul-principal: #0d47a1; /* azul principal dos mano la da fijo */
+  --laranja-destaque: #ff9800; /* laranja destaque 'talvez seja mais azul' dos brother da fijo */
+  --branco: #ffffff; /* branco puro fazer uma juncao com azul*/
+  --cinza-claro: #f5f5f5; /* cinza claro para fundos se der certo */
+}
+/*
+>>>>>>> b230bfa23e3e4415ea68cb5d0485b02f46ace3a2
 footer {
   background-color: var(--azul-principal);
   color: var(--branco);
